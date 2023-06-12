@@ -28,39 +28,6 @@ body {
     }
   }
   
-  <!DOCTYPE html>
-  <html>
-  <head>
-    <title>Horizontal Navigation Bar Example</title>
-    <style>
-      /* Styles for the navigation bar */
-      .navbar {
-        background-color: #333;
-      }
-  
-      .navbar ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-      }
-  
-      .navbar li {
-        float: left;
-      }
-  
-      .navbar a {
-        display: block;
-        color: #1c1c1c;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-  
-      .navbar a:hover {
-        background-color: #ddd;
-        color: black;
-      }
     </style>
   </head>
   <body>
