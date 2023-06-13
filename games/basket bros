@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Basketball stars</title>
-</head>
-<body>
-  <iframe src="https://html5.gamedistribution.com/69d78d071f704fa183d75b4114ae40ec/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="920" height="480" scrolling="none" frameborder="0"></iframe>
-</body>
-</html>
+<div style="height: 320px; width: 480px;" >
+    <iframe style="height:100%;width:100%" src="https://html5gameshq.com/iframed/basketball-stars" frameborder="0" scrolling="no"></iframe>
+    <br><!-- Please dont remove the link below. Contact us if you have questions. -->
+    <a href="https://html5gameshq.com/?r=embed-ref" target="_blank">More Games at HTML5GamesHQ...</a>
+  </div/>
