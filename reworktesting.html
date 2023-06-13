@@ -23,7 +23,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(-45deg, #fc5c7d, #6a82fb, #05dfd7, #b9f18c);
+      background: linear-gradient(-45deg, #fcb35f, #f5b505, #fbab50, #ff8800);
       background-size: 400% 400%;
       animation: AnimateBG 20s ease infinite;
       position: absolute;
@@ -76,7 +76,7 @@
     }
 
     nav {
-      background-color: #ffffff;
+      background-color: #180c0c;
       padding: 10px;
       font-family: 'Roboto', sans-serif;
       display: flex;
@@ -108,87 +108,29 @@
 
     nav ul li a {
       text-decoration: none;
-      color: #000000;
+      color: #ffffff;
       font-weight: bold;
       padding: 5px;
     }
 
     nav ul li a:hover {
-      background-color: #eeeeee;
+      background-color: #0e0101;
     }
 
     .dropdown {
       position: relative;
     }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  min-width: 100px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  white-space: nowrap;
-  /* Updated properties */
-  top: 100%;
-  left: 0;
-  transform: translateX(-50%);
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 5px;
-  /* Updated properties */
-  width: 100%;
-  margin-right: 5px;
-}
-
-
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-      animation: fadeIn 0.3s ease-in-out;
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 100px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      white-space: nowrap;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-  </style>
-</head>
-<body>
-  <nav>
-    <div class="search-bar">
-      <input type="search" placeholder="Search...">
-    </div>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Contact</a></li>
-      <li class="dropdown">
-        <a href="#">More</a>
-        <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-      </li>
-    </ul>
-  </nav>
-
-  <div class="bg"></div>
-  <div class="card">
-    <h2>Title</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec ante at libero eleifend malesuada. Sed maximus mollis sem, id elementum orci fringilla in.</p>
-    <button>Button</button>
-  </div>
-</body>
-</html>
+    .dropdown-content
