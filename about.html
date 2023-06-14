@@ -43,6 +43,38 @@
         background-position: 0% 50%;
       }
     }
+
+    .card {
+      max-width: 400px;
+      background-color: white;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      margin: auto;
+      margin-top: 100px;
+    }
+
+    .card h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .card button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
     nav {
       background-color: #201f1f;
       padding: 10px;
@@ -88,11 +120,43 @@
     .dropdown {
       position: relative;
     }
-    
-    <b>So this is like a different site because a dev said that google sites was shit, so here we are...... I'd like to
-    thank BSOD323(or Billy) for way to much helpw ith the site. I'd also like to thank dreamingg, if not for him then I 
-    would not know how to fucking code. I'd also like to thank everyone whos help us on this site, inside and out. If 
-    you want to get updates on TheHub Corp. and JaosnHub, you can go onto the discord. So yeah Thank you. 😘😘😘😘</b>
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 100px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      white-space: nowrap;
+      top: 100%;
+      left: 0;
+      transform: translateX(0%);
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 5px;
+      width
+
+: 100%;
+      margin-right: 5px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
   </style>
 </head>
@@ -102,16 +166,19 @@
       <input type="search" placeholder="Search...">
     </div>
     <ul>
-      <li><a href="home.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="#">Games</a></li>
-      <div class="dropdown-content"
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <li><a href="#">Partners</a></li>
-      <li><a href="#">Befuddle your class</a></li>
       <li class="dropdown">
-        <a href="#">More</a>
+        <a href="#">Games</a>
+        <div class="dropdown-content">
+          <a href="#">Game 1</a>
+          <a href="#">Game 2</a>
+          <a href="#">Game 3</a>
+        </div>
+      </li>
+      <li><a href="#">Partners</a></li>
+      <li class="dropdown">
+        <a href="#">Befuddle your Class</a>
         <div class="dropdown-content">
           <a href="#">Link 1</a>
           <a href="#">Link 2</a>
@@ -123,6 +190,9 @@
 
   <div class="bg"></div>
   <div class="card">
+    <h2>About JasonHub</h2>
+    <p>yo arjun if u see this can u write an about thing here thx</p>
+    <button>Button</button>
   </div>
 </body>
 </html>
