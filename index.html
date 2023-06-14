@@ -155,7 +155,6 @@
         transform: translateY(0);
       }
     }
-
   </style>
 </head>
 <body>
@@ -178,7 +177,7 @@
       <li class="dropdown">
         <a href="#">Befuddle your Class</a>
         <div class="dropdown-content">
-          <a href="#">Link 1</a>
+          <a href="#" onclick="replaceCard('ultraviolet')">Ultraviolet</a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
         </div>
@@ -204,6 +203,10 @@
         card.innerHTML = `
           <h2>About JasonHub</h2>
           <p>yo arjun if u see this can u write an about thing here thx</p>
+        `;
+      } else if (page === 'ultraviolet') {
+        card.innerHTML = `
+          <iframe src="https://uvvc2.vercel.app/" style="position: absolute; top: 0; left: 0; width: 100%; height: calc(100vh - 70px); border: none;"></iframe>
         `;
       }
     }
