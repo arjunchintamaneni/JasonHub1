@@ -155,6 +155,22 @@
         transform: translateY(0);
       }
     }
+
+
+
+
+  .fullscreen-iframe {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+
   </style>
 </head>
 <body>
@@ -206,10 +222,11 @@
         `;
       } else if (page === 'ultraviolet') {
         card.innerHTML = `
-          <iframe src="https://uvvc2.vercel.app/" style="position: absolute; top: 0; left: 0; width: 100%; height: calc(100vh - 90px); border: none;"></iframe>
+          <iframe class="fullscreen-iframe" src="https://uvvc2.vercel.app/"></iframe>
         `;
       }
     }
   </script>
+  
 </body>
 </html>
