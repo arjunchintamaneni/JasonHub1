@@ -121,28 +121,26 @@
       position: relative;
     }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  min-width: 100px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  white-space: nowrap;
-  /* Updated properties */
-  top: 100%;
-  left: 0;
-  transform: translateX(0%);
-}
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 100px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      white-space: nowrap;
+      top: 100%;
+      left: 0;
+      transform: translateX(0%);
+    }
 
-.dropdown-content a {
-  display: block;
-  padding: 5px;
-  /* Updated properties */
-  width: 100%;
-  margin-right: 5px;
-}
+    .dropdown-content a {
+      display: block;
+      padding: 5px;
+      width
 
-
+: 100%;
+      margin-right: 5px;
+    }
 
     .dropdown:hover .dropdown-content {
       display: block;
@@ -168,13 +166,16 @@
       <input type="search" placeholder="Search...">
     </div>
     <ul>
-      <li><a href="home.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="#">Games</a></li>
-      <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-    </div>
+      <li class="dropdown">
+        <a href="#">Games</a>
+        <div class="dropdown-content">
+          <a href="#">Game 1</a>
+          <a href="#">Game 2</a>
+          <a href="#">Game 3</a>
+        </div>
+      </li>
       <li><a href="#">Partners</a></li>
       <li class="dropdown">
         <a href="#">Befuddle your Class</a>
