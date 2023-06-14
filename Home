@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TheHub Corp.</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welecom to How to get a GUN</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services(We offer the nearest Gun store)</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>God bless the lovley state of texas.</p>
+        </section>
+
+        <section>
+            <h2>Services</h2>
+            <ul>
+                <li>Gun Finding</li>
+                <li>How to grab a gun</li>
+                <li>My story/li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
