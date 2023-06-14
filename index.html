@@ -136,9 +136,7 @@
     .dropdown-content a {
       display: block;
       padding: 5px;
-      width
-
-: 100%;
+      width: 100%;
       margin-right: 5px;
     }
 
@@ -166,8 +164,8 @@
       <input type="search" placeholder="Search...">
     </div>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="#home" onclick="replaceCard('home')">Home</a></li>
+      <li><a href="#about" onclick="replaceCard('about')">About</a></li>
       <li class="dropdown">
         <a href="#">Games</a>
         <div class="dropdown-content">
@@ -189,10 +187,26 @@
   </nav>
 
   <div class="bg"></div>
-  <div class="card">
-    <h2>Title</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec ante at libero eleifend malesuada. Sed maximus mollis sem, id elementum orci fringilla in.</p>
-    <button>Button</button>
+  <div id="card" class="card">
+    <h2>JasonHub</h2>
+    <p>welcome to jasonhub yay</p>
   </div>
+
+  <script>
+    function replaceCard(page) {
+      const card = document.getElementById('card');
+      if (page === 'home') {
+        card.innerHTML = `
+          <h2>JasonHub</h2>
+          <p>welcome to jasonhub yay</p>
+        `;
+      } else if (page === 'about') {
+        card.innerHTML = `
+          <h2>About JasonHub</h2>
+          <p>yo arjun if u see this can u write an about thing here thx</p>
+        `;
+      }
+    }
+  </script>
 </body>
 </html>
