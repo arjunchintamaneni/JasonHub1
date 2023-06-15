@@ -177,19 +177,12 @@
     <ul>
       <li><a href="#home" onclick="replaceCard('home')">Home</a></li>
       <li><a href="#about" onclick="replaceCard('about')">About</a></li>
+      <li><a href="#partners" onclick="replaceCard('partners')">Partners</a></li>
+      <li><a href="#befuddle your class">Befuddle your class</a></li>
       <li class="dropdown">
-        <a href="#">Games</a>
+        <a href="#more">More</a>
         <div class="dropdown-content">
-          <a href="#">Game 1</a>
-          <a href="#">Game 2</a>
-          <a href="#">Game 3</a>
-        </div>
-      </li>
-      <li><a href="#partners">Partners</a></li>
-      <li class="dropdown">
-        <a href="#">Befuddle your Class</a>
-        <div class="dropdown-content">
-          <a href="#" onclick="openInNewTab('https://uvvc2.vercel.app')">Ultraviolet</a>
+          <a href="#">Link 1</a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
         </div>
@@ -198,35 +191,29 @@
   </nav>
 
   <div class="bg"></div>
-  <div id="card" class="card">
-    <h2>JasonHub</h2>
-    <p>welcome to jasonhub yay</p>
-  </div>
+  <div id="card"></div>
+
   <script>
     function replaceCard(page) {
       const card = document.getElementById('card');
       if (page === 'home') {
         card.innerHTML = `
           <h2>JasonHub</h2>
-          <p>welcome to jasonhub yay</p>
+          <p>Welcome to JasonHub yay</p>
         `;
       } else if (page === 'about') {
         card.innerHTML = `
           <h2>About JasonHub</h2>
-          <p>So this is like a different site because a dev said that google sites was shit, so here we are...... I'd like to
+          <p>So this is like a different site because a dev said that Google Sites was shit, so here we are... I'd like to
           thank BSOD323 (or Billy) for way too much help with the site. I'd also like to thank dreamingg, if not for him then I 
-          would not know how to fucking code. I'd also like to thank everyone who helped us on this site, inside and out. If 
-          you want to get updates on TheHub Corp. and JasonHub, you can go onto the discord. So yeah Thank you. 😘😘😘😘</p>`;
+          would not know how to code. I'd also like to thank everyone who helped us on this site, inside and out. If 
+          you want to get updates on TheHub Corp. and JasonHub, you can go onto the Discord. So yeah, thank you. 😘😘😘😘</p>`;
       } else if (page === 'partners') {
         card.innerHTML = `
           <h2>Partners</h2>
-          <p>So we don't have any partnerships right now. You can apply for one on our discord. <a href="https://discord.gg/9EmhvpgNdG">https://discord.gg/9EmhvpgNdG</a></p>`;
+          <p>So we don't have any partnerships right now. You can apply for one on our Discord. <a href="https://discord.gg/9EmhvpgNdG">https://discord.gg/9EmhvpgNdG</a></p>`;
       }
     }
-  
-    function openInNewTab(url) {
-      window.open(url, '_blank');
-    }
   </script>
- </body>
- </html>  
+</body>
+</html>
