@@ -129,7 +129,7 @@
       box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       white-space: nowrap;
       top: calc(100% + 5px);
-      left: 0;
+      left: -60%; /* Moved the dropdown menu to the left by 60% */
       transform: translateX(0%);
     }
 
@@ -148,11 +148,11 @@
     @keyframes fadeIn {
       0% {
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translate(-10px, -10px); /* Adjusted the translation */
       }
       100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translate(0);
       }
     }
 
