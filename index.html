@@ -208,13 +208,6 @@
           replaceCard(page);
         });
       });
-
-      const dropdownLinks = document.querySelectorAll('.dropdown-content a');
-      dropdownLinks.forEach(function(link) {
-        link.addEventListener('click', function(event) {
-          event.stopPropagation();
-        });
-      });
     });
   
     function replaceCard(page) {
