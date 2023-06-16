@@ -179,7 +179,7 @@
       <li><a href="#home" onclick="replaceCard('home')">Home</a></li>
       <li><a href="#about" onclick="replaceCard('about')">About</a></li>
       <li><a href="#partners" onclick="replaceCard('partners')">Partners</a></li>
-      <li><a href="#games" onclick="replaceCard('Befuddle your class')">Games (WIP)</a></li>
+      <li><a href="#games" onclick="replaceCard('Games')">Games (WIP)</a></li>
       <li class="dropdown">
         <a href="#befuddleyourclass">Befuddle your class</a>
         <div class="dropdown-content">
@@ -224,8 +224,15 @@
             <p>So we don't have any partnerships right now. You can apply for one on our Discord.
              <a href="https://discord.gg/9EmhvpgNdG">https://discord.gg/9EmhvpgNdG</a></p>
           </div>`;
-      }
+     } else if (page === 'Games') {
+        card.innerHTML = `
+          <div class="card">
+            <h2>No Games</h2>
+            <p>No game. Sorry (I guess)</p>
+          </div>`;
     }
+    
+  }
   </script>
 </body>
 </html>
