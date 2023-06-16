@@ -200,6 +200,18 @@
   </div>
 
   <script>
+    // Add event listeners to the links and call the replaceCard function
+    document.addEventListener('DOMContentLoaded', function() {
+      const links = document.querySelectorAll('nav ul li a');
+      links.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+          event.preventDefault();
+          const page = link.getAttribute('href').substring(1);
+          replaceCard(page);
+        });
+      });
+    });
+  
     function replaceCard(page) {
       const card = document.getElementById('card');
       if (page === 'home') {
@@ -222,9 +234,9 @@
           <div class="card">
             <h2>Partners</h2>
             <p>So we don't have any partnerships right now. You can apply for one on our Discord.
-             <a href="https://dsc.gg/jasonhub">Discord</a></p>
+            <a href="https://dsc.gg/jasonhub">Discord</a></p>
           </div>`;
-     } else if (page === 'Games') {
+      } else if (page === 'Games') {
         card.innerHTML = `
           <div class="card">
             <h2>Games</h2>
@@ -232,10 +244,8 @@
             <a href="https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/fr6ks8ab/vi9syd1rm@84d73b06974a0734495c3c1f280653183b357524/ls49v2n/slope.xml">Slope</a>
             <a href="https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/r3tq6l1/to9d2if10dv@80e256cb3ca3b5793665f5ffb7d62285f2805e86/g7kh63s/bitlife.xml">BitLife</a>
           </div>`;
-
+      }
     }
-    
-  }
   </script>
 </body>
 </html>
