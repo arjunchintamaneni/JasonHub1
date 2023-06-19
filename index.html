@@ -6,6 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Google</title>
   <style>
+    .card.animate-card {
+  animation: slideIn 0.5s;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
     @font-face {
       font-family: 'Roboto';
       src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -168,51 +184,59 @@
     });
   
     function replaceCard(page) {
-      const card = document.getElementById('card');
-      if (page === 'home') {
-        card.innerHTML = `
-          <div class="card">
-            <h2>JasonHub</h2>
-            <p>welcome to jasonhub yay</p>
-          </div>`;
-      } else if (page === 'about') {
-        card.innerHTML = `
-          <div class="card">
-            <h2>About JasonHub</h2>
-            <p>So this is like a different site because a dev said that Google Sites was shit, so here we are... I'd like to
-            thank BSOD323 (or Billy) for way too much help with the site. I'd also like to thank dreamingg, if not for him then I 
-            would not know how to code. I'd also like to thank everyone who helped us on this site, inside and out. If 
-            you want to get updates on TheHub Corp. and JasonHub, you can go onto the Discord. So yeah, thank you. 😘😘😘😘</p>
-          </div>`;
-      } else if (page === 'partners') {
-        card.innerHTML = `
-          <div class="card">
-            <h2>Partners</h2>
-            <p>So we don't have any partnerships right now. You can apply for one on our Discord.
-            <a href="https://dsc.gg/jasonhub">Discord</a></p>
-          </div>`;
-        } else if (page === 'Games') {
-        card.innerHTML = `
-          <div class="card">
-            <h2>Games</h2>
-            <a href="https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/r3tq6l1/to9d2if3dv@66c73577d404dbf17a688cd4ae3198db4ba840d4/zm48hw/bs.xml" target="_blank">Basketball Stars</a>
-            <br>
-            <a href="https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/fr6ks8ab/vi9syd1rm@84d73b06974a0734495c3c1f280653183b357524/ls49v2n/slope.xml" target="_blank">Slope</a>
-            <br>
-            <a href="https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/r3tq6l1/to9d2if10dv@80e256cb3ca3b5793665f5ffb7d62285f2805e86/g7kh63s/bitlife.xml" target="_blank">BitLife</a>
-            </div>`;
-          } else if (page === 'befuddleyourclass') {
-        card.innerHTML = `
-          <div class="card">
-            <h2>Befuddle your class</h2>
-            <a href="https://uvvc2.vercel.app/" target="_blank">Ultraviolet Proxy</a>
-            <br>
-            <a href="https://login.xn--72cg7bdd3bro6b3ab9c8btw4x.com/" target="_blank">Rammerhead Proxy</a>
-            <br>
-            <a href="https://career.leitud.ee/" target="_blank">Abyss Proxy</a>
-            </div>`;
-      }
+  const card = document.getElementById('card');
+  card.classList.remove('animate-card'); // Remove the animation class
+
+  // Wait for the animation to complete before replacing the card content
+  setTimeout(function() {
+    if (page === 'home') {
+      card.innerHTML = `
+        <div class="card">
+          <h2>JasonHub</h2>
+          <p>welcome to jasonhub yay</p>
+        </div>`;
+    } else if (page === 'about') {
+      card.innerHTML = `
+        <div class="card">
+          <h2>About JasonHub</h2>
+          <p>So this is like a different site because a dev said that Google Sites was shit, so here we are... I'd like to
+          thank BSOD323 (or Billy) for way too much help with the site. I'd also like to thank dreamingg, if not for him then I 
+          would not know how to code. I'd also like to thank everyone who helped us on this site, inside and out. If 
+          you want to get updates on TheHub Corp. and JasonHub, you can go onto the Discord. So yeah, thank you. 😘😘😘😘</p>
+        </div>`;
+    } else if (page === 'partners') {
+      card.innerHTML = `
+        <div class="card">
+          <h2>Partners</h2>
+          <p>So we don't have any partnerships right now. You can apply for one on our Discord.
+          <a href="https://dsc.gg/jasonhub">Discord</a></p>
+        </div>`;
+    } else if (page === 'Games') {
+      card.innerHTML = `
+        <div class="card">
+          <h2>Games</h2>
+          <a href="https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/r3tq6l1/to9d2if3dv@66c73577d404dbf17a688cd4ae3198db4ba840d4/zm48hw/bs.xml" target="_blank">Basketball Stars</a>
+          <br>
+          <a href="https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/fr6ks8ab/vi9syd1rm@84d73b06974a0734495c3c1f280653183b357524/ls49v2n/slope.xml" target="_blank">Slope</a>
+          <br>
+          <a href="https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/r3tq6l1/to9d2if10dv@80e256cb3ca3b5793665f5ffb7d62285f2805e86/g7kh63s/bitlife.xml" target="_blank">BitLife</a>
+        </div>`;
+    } else if (page === 'befuddleyourclass') {
+      card.innerHTML = `
+        <div class="card">
+          <h2>Befuddle your class</h2>
+          <a href="https://uvvc2.vercel.app/" target="_blank">Ultraviolet Proxy</a>
+          <br>
+          <a href="https://login.xn--72cg7bdd3bro6b3ab9c8btw4x.com/" target="_blank">Rammerhead Proxy</a>
+          <br>
+          <a href="https://career.leitud.ee/" target="_blank">Abyss Proxy</a>
+        </div>`;
     }
+
+    card.classList.add('animate-card'); // Add the animation class back
+  }, 500); // Adjust the duration to match your animation duration
+}
+
   </script>
 </body>
 </html>
