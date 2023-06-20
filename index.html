@@ -52,6 +52,7 @@
       font-family: 'Roboto', sans-serif;
       margin: auto;
       margin-top: 100px;
+      border-radius: 10px; /* Add border radius for curved edges */
     }
 
     .card h2 {
@@ -76,20 +77,20 @@
     }
 
     .card.animate-card {
-  animation: slideIn 0.5s;
-}
+      animation: slideIn 0.5s;
+    }
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
 
     nav {
@@ -158,8 +159,7 @@
       <li><a href="#about" onclick="replaceCard('about')">About</a></li>
       <li><a href="#partners" onclick="replaceCard('partners')">Partners</a></li>
       <li><a href="#games" onclick="replaceCard('Games')">Games</a></li>
-        <li><a href="#befuddleyourclass" onclick="replaceCard('befuddleyourclass')">Befuddle your class</a></li>
-      </li>
+      <li><a href="#befuddleyourclass" onclick="replaceCard('befuddleyourclass')">Befuddle your class</a></li>
     </ul>
   </nav>
 
@@ -201,42 +201,42 @@
         return `
           <div class="card">
             <h2>JasonHub</h2>
-          <p>Welcome to JasonHub, your go-to unblocked games website designed to entertain you during school or work. We understand that the daily routine can sometimes feel monotonous, but fret not! We're here to inject some excitement into your day with our vast collection of games. From puzzles to action-packed adventures and strategic challenges, we have something for everyone. Our secure platform ensures a worry-free gaming experience, so you can immerse yourself in a world of fun without restrictions. So take a break, unleash your inner gamer, and get ready for endless entertainment at JasonHub. Welcome aboard!</p>
-          <a href="https://dsc.gg/jasonhub">Discord</a>
+            <p>Welcome to JasonHub, your go-to unblocked games website designed to entertain you during school or work. We understand that the daily routine can sometimes feel monotonous, but fret not! We're here to inject some excitement into your day with our vast collection of games. From puzzles to action-packed adventures and strategic challenges, we have something for everyone. Our secure platform ensures a worry-free gaming experience, so you can immerse yourself in a world of fun without restrictions. So take a break, unleash your inner gamer, and get ready for endless entertainment at JasonHub. Welcome aboard!</p>
+            <a href="https://dsc.gg/jasonhub">Discord</a>
           </div>`;
       } else if (page === 'about') {
         return `
           <div class="card">
             <h2>About JasonHub</h2>
-          <p>Welcome to this unique site, a project born out of the motivation to create something distinct from the limitations experienced with Google Sites. Here we are, thanks to the invaluable assistance of BSOD323 (or Billy) who has provided immense support in developing this site. A special appreciation goes out to dreamingg, whose guidance in coding has been instrumental. We extend our heartfelt gratitude to everyone who has contributed, both internally and externally, to the success of this site. If you're interested in staying updated on TheHub Corp. and JasonHub, feel free to join our Discord community. Thank you so much for your support and contributions. 😘😘😘😘</p>
-          <a href="https://dsc.gg/jasonhub">Discord</a>
+            <p>Welcome to this unique site, a project born out of the motivation to create something distinct from the limitations experienced with Google Sites. Here we are, thanks to the invaluable assistance of BSOD323 (or Billy) who has provided immense support in developing this site. A special appreciation goes out to dreamingg, whose guidance in coding has been instrumental. We extend our heartfelt gratitude to everyone who has contributed, both internally and externally, to the success of this site. If you're interested in staying updated on TheHub Corp. and JasonHub, feel free to join our Discord community. Thank you so much for your support and contributions. 😘😘😘😘</p>
+            <a href="https://dsc.gg/jasonhub">Discord</a>
           </div>`;
       } else if (page === 'partners') {
         return `
           <div class="card">
             <h2>Partners</h2>
-          <p>Currently, we don't have any partnerships established. However, we are open to collaborations and partnerships. If you're interested in becoming a partner, we invite you to join our Discord community and apply there. We look forward to exploring potential opportunities together.</p>
-          <a href="https://dsc.gg/jasonhub">Discord</a>
+            <p>Currently, we don't have any partnerships established. However, we are open to collaborations and partnerships. If you're interested in becoming a partner, we invite you to join our Discord community and apply there. We look forward to exploring potential opportunities together.</p>
+            <a href="https://dsc.gg/jasonhub">Discord</a>
           </div>`;
       } else if (page === 'Games') {
         return `
           <div class="card">
             <h2>Games</h2>
-          <a href="https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/r3tq6l1/to9d2if3dv@66c73577d404dbf17a688cd4ae3198db4ba840d4/zm48hw/bs.xml" target="_blank">Basketball Stars</a>
-          <br>
-          <a href="https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/fr6ks8ab/vi9syd1rm@84d73b06974a0734495c3c1f280653183b357524/ls49v2n/slope.xml" target="_blank">Slope</a>
-          <br>
-          <a href="https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/r3tq6l1/to9d2if10dv@80e256cb3ca3b5793665f5ffb7d62285f2805e86/g7kh63s/bitlife.xml" target="_blank">BitLife</a>
+            <a href="https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/r3tq6l1/to9d2if3dv@66c73577d404dbf17a688cd4ae3198db4ba840d4/zm48hw/bs.xml" target="_blank">Basketball Stars</a>
+            <br>
+            <a href="https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/fr6ks8ab/vi9syd1rm@84d73b06974a0734495c3c1f280653183b357524/ls49v2n/slope.xml" target="_blank">Slope</a>
+            <br>
+            <a href="https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/r3tq6l1/to9d2if10dv@80e256cb3ca3b5793665f5ffb7d62285f2805e86/g7kh63s/bitlife.xml" target="_blank">BitLife</a>
           </div>`;
       } else if (page === 'befuddleyourclass') {
         return `
           <div class="card">
             <h2>Befuddle your class</h2>
-          <a href="https://uvvc2.vercel.app/" target="_blank">Ultraviolet Proxy</a>
-          <br>
-          <a href="https://login.xn--72cg7bdd3bro6b3ab9c8btw4x.com/" target="_blank">Rammerhead Proxy</a>
-          <br>
-          <a href="https://career.leitud.ee/" target="_blank">Abyss Proxy</a>
+            <a href="https://uvvc2.vercel.app/" target="_blank">Ultraviolet Proxy</a>
+            <br>
+            <a href="https://login.xn--72cg7bdd3bro6b3ab9c8btw4x.com/" target="_blank">Rammerhead Proxy</a>
+            <br>
+            <a href="https://career.leitud.ee/" target="_blank">Abyss Proxy</a>
           </div>`;
       }
     }
