@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url("background.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        nav ul li {
+            display: inline-block;
+        }
+        
+        nav ul li a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        main {
+            flex: 1;
+        }
+        
+        .welcome-section {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 100px;
+            text-align: center;
+        }
+        
+        .welcome-section h1 {
+            font-size: 48px;
+        }
+        
+        .welcome-section p {
+            font-size: 24px;
+        }
+        
+        .game-section {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: black;
+            padding: 50px;
+            text-align: center;
+        }
+        
+        .game-section p {
+            font-size: 24px;
+        }
+        
+        .game-section .search-section {
+            margin-bottom: 20px;
+        }
+        
+        .game-section input[type="text"] {
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 4px;
+            border: none;
+            width: 300px;
+            max-width: 100%;
+        }
+        
+        .game-section button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .game-section button:hover {
+            background-color: #0056b3;
+        }
+        
+        .game-section button.active {
+            background-color: #28a745;
+        }
+        
+        .fs-section {
+            text-align: center;
+        }
+        
+        .fs-section button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .fs-section button:hover {
+            background-color: #1f8c3e;
+        }
+        
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function changeGameCode(url, button) {
+            var gameSection = document.getElementById("game-section");
+            gameSection.innerHTML = '<iframe src="' + url + '" style="width: 100%; height: 800px; border: none;"></iframe> <br> <button class="fs-section" onclick="scrollToButtons()">Menu</button> <button class="fs-section" onclick="openFullscreen()">Fullscreen</button>';
+
+            // Remove the 'active' class from all buttons
+            var buttons = document.querySelectorAll('.game-section button');
+            buttons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            // Add the 'active' class to the clicked button
+            button.classList.add('active');
+        }
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const currentYear = new Date().getFullYear();
+            const footerText = document.querySelector('footer p');
+            footerText.innerHTML = '&copy; ' + currentYear + ' GamingWorld. All rights reserved.';
+        });
+
+        function openFullscreen() {
+            var iframe = document.querySelector('#game-section iframe');
+            if (iframe) {
+                var url = iframe.getAttribute('src');
+                if (url) {
+                    window.open(url, '_blank');
+                }
+            }
+        }
+
+        function searchGames() {
+            var input = document.getElementById("search-input");
+            var filter = input.value.toUpperCase();
+            var gameButtons = document.querySelectorAll('.game-section button');
+
+            gameButtons.forEach(function(button) {
+                var gameName = button.textContent || button.innerText;
+                if (gameName.toUpperCase().indexOf(filter) > -1) {
+                    button.style.display = "";
+                } else {
+                    button.style.display = "none";
+                }
+            });
+        }
+
+        function scrollToGameCode() {
+            var gameSection = document.getElementById("game-section");
+            gameSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToButtons() {
+            var welcomeSection = document.querySelector(".welcome-section");
+            welcomeSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <h1>Games</h1>
+            <div class="game-section">
+                <div class="search-section">
+                    <input type="text" id="search-input" oninput="searchGames()" placeholder="Search games">
+                </div>
+                <div class="game-buttons">
+                    <button onclick="changeGameCode('https://games.crazygames.com/en_US/bapbap/index.html', this); scrollToGameCode()">BAPBAP</button>
+                    <button onclick="changeGameCode('https://games.crazygames.com/en_US/bloxdhop-io/index.html', this); scrollToGameCode()">Bloxd.io</button>
+                    <button onclick="changeGameCode('https://games.crazygames.com/en_US/shellshockersio/index.html', this); scrollToGameCode()">Shell Shockers</button>
+                    <button onclick="changeGameCode('https://games.crazygames.com/en_US/kirka-io/index.html', this); scrollToGameCode()">Kirka.io</button>
+                    <button onclick="changeGameCode('https://1v1.lol/', this); scrollToGameCode()">1v1.lol</button>
+                    <button onclick="window.open('https://now.gg/play/roblox-corporation/5349/roblox', '_blank');">Roblox</button>                      
+                    <button onclick="window.open('https://www.crazygames.com/game/moto-x3m?utm_source=https%3A%2F%2Fgamingworld-kappa.vercel.app%2F&utm_medium=game_frame&utm_content=embedded_redirect', '_blank');">Moto X3M</button>  
+                    <button onclick="changeGameCode('https://games.crazygames.com/en_US/clicker-heroes/index.html', this); scrollToGameCode()">Clicker Heroes</button>
+                    <button onclick="changeGameCode('https://games.crazygames.com/en_US/idle-it-company/index.html', this); scrollToGameCode()">Idle IT Company</button>
+                    <button onclick="changeGameCode('https://diep.io', this); scrollToGameCode()">diep.io</button>
+                    <button onclick="window.open('https://radmanplays.github.io/play/', '_blank');">Minecraft</button>  
+                </div>
+                <br> 
+                <button class="fs-section" onclick="scrollToGameCode()">Open Game</button>
+            </div>
+        </section>
+      
+
+        <section id="game-section" class="game-section">
+            <!-- Initial game code -->
+            <p>Click on a button above to load a game!</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 GamingWorld. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
