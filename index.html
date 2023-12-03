@@ -1,95 +1,40 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <style>
-      /* Your CSS styles here */
-    </style>
-  </head>
-    <nav>
-      <div class="search-bar">
-        <input type="search" placeholder="Search...">
-      </div>
-      <ul>
+    <title>Redirect Example</title>
+    <!-- Link your stylesheet here -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav>
+    <ul>
         <li><a href="#home" onclick="replaceCard('home')">Home</a></li>
         <li><a href="#about" onclick="replaceCard('about')">About</a></li>
         <li><a href="#partners" onclick="replaceCard('partners')">Partners</a></li>
-        <li><a href="#games" onclick="replaceCard('games.html)">Games</a></li>
+        <li><a href="games.html">Games</a></li>
         <li><a href="#befuddleyourclass" onclick="replaceCard('befuddleyourclass')">Befuddle your class</a></li>
         <li><a href="#2048test" onclick="replaceCard('2048test')">2048 Test</a></li>
-      </ul>
-    </nav>
-  
-    <div class="bg"></div>
-    <div id="card" class="card">
-      <h2>JasonHub</h2>
-      <p>Welcome to JasonHub, your go-to unblocked games website designed to entertain you during school or work. We understand that the daily routine can sometimes feel monotonous, but fret not! We're here to inject some excitement into your day with our vast collection of games. From puzzles to action-packed adventures and strategic challenges, we have something for everyone. Our secure platform ensures a worry-free gaming experience, so you can immerse yourself in a world of fun without restrictions. So take a break, unleash your inner gamer, and get ready for endless entertainment at JasonHub. Welcome aboard!</p>
-      <a href="https://dsc.gg/jasonhub">Discord</a>
-    </div>
+    </ul>
+</nav>
+
     <script>
-      // Add event listeners to the links and call the replaceCard function
-      document.addEventListener('DOMContentLoaded', function() {
-        const links = document.querySelectorAll('nav ul li a');
-        links.forEach(function(link) {
-          link.addEventListener('click', function(event) {
-            event.preventDefault();
-            const page = link.getAttribute('href').substring(1);
-            replaceCard(page);
-          });
-        });
-      });
-    
-      function replaceCard(page) {
-        const card = document.getElementById('card');
-        card.style.animation = 'none'; // Disable the animation
-  
-        // Wait for a brief delay before triggering the animation
-        setTimeout(function() {
-          card.innerHTML = getCardContent(page);
-          card.style.animation = ''; // Enable the animation
-        }, 10);
-      }
-  
-      function getCardContent(page) {
-        if (page === 'home') {
-          return `
-            <div class="card">
-              <h2>JasonHub</h2>
-              <p>Welcome to JasonHub, your go-to unblocked games website designed to entertain you during school or work. We understand that the daily routine can sometimes feel monotonous, but fret not! We're here to inject some excitement into your day with our vast collection of games. From puzzles to action-packed adventures and strategic challenges, we have something for everyone. Our secure platform ensures a worry-free gaming experience, so you can immerse yourself in a world of fun without restrictions. So take a break, unleash your inner gamer, and get ready for endless entertainment at JasonHub. Welcome aboard!</p>
-              <a href="https://dsc.gg/jasonhub">Discord</a>
-            </div>`;
-        } else if (page === 'about') {
-          return `
-            <div class="card">
-              <h2>About JasonHub</h2>
-              <p>Welcome to this unique site, a project born out of the motivation to create something distinct from the limitations experienced with Google Sites. Here we are, thanks to the invaluable assistance of BSOD323 (or Billy) who has provided immense support in developing this site. A special appreciation goes out to dreamingg, whose guidance in coding has been instrumental. We extend our heartfelt gratitude to everyone who has contributed, both internally and externally, to the success of this site. If you're interested in staying updated on TheHub Corp. and JasonHub, feel free to join our Discord community. Thank you so much for your support and contributions. 😘😘😘😘 -DSOD323</p>
-              <a href="https://dsc.gg/jasonhub">Discord</a>
-            </div>`;
-        } else if (page === 'partners') {
-          return `
-            <div class="card">
-              <h2>Partners</h2>
-              <p>Currently, we don't have any partnerships established. However, we are open to collaborations and partnerships. If you're interested in becoming a partner, we invite you to join our Discord community and apply there. We look forward to exploring potential opportunities together.</p>
-              <a href="https://dsc.gg/jasonhub">Discord</a>
-            </div>`;
-        } else if (page === 'games.html') {
-        } else if (page === 'befuddleyourclass') {
-          return `
-            <div class="card">
-              <h2>Befuddle your class</h2>
-              <a href="https://uvvc2.vercel.app/" target="_blank">Ultraviolet Proxy</a>
-              <br>
-              <a href="https://login.xn--72cg7bdd3bro6b3ab9c8btw4x.com/" target="_blank">Rammerhead Proxy</a>
-              <br>
-              <a href="https://career.leitud.ee/" target="_blank">Abyss Proxy</a>
-            </div>`;
+        // Add this script in the <head> or at the end of the <body> section
+
+        // Redirect function
+        function redirectToGamesPage() {
+            window.location.href = 'games.html';
         }
-      }
+
+        // Example: Redirect when the page loads (you can trigger it on a button click or other events)
+        document.addEventListener('DOMContentLoaded', function () {
+            redirectToGamesPage();
+        });
     </script>
-  </body>
-  </html> 
-  
+</body>
+
+</html>
